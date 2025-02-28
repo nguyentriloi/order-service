@@ -1,0 +1,157 @@
+{
+	"info": {
+		"_postman_id": "4c585e13-2815-4108-b276-1be233189ad3",
+		"name": "coffee-shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5475038"
+	},
+	"item": [
+		{
+			"name": "ready-order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "cb-load-balancer-1952637199.ap-southeast-1.elb.amazonaws.com/api/v1/order/1/ready",
+					"host": [
+						"cb-load-balancer-1952637199",
+						"ap-southeast-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"order",
+						"1",
+						"ready"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "pickup-order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "cb-load-balancer-1952637199.ap-southeast-1.elb.amazonaws.com/api/v1/order/1/pickup",
+					"host": [
+						"cb-load-balancer-1952637199",
+						"ap-southeast-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"order",
+						"1",
+						"pickup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "complete-order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "cb-load-balancer-1952637199.ap-southeast-1.elb.amazonaws.com/api/v1/order/1/complete",
+					"host": [
+						"cb-load-balancer-1952637199",
+						"ap-southeast-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"order",
+						"1",
+						"complete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create-order",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"customerId\": 1,\n    \"totalAmount\": 20000,\n    \"paymentMethod\": \"COD\",\n    \"items\": [\n        {\n            \"menuItemId\": 1,\n            \"quantity\": 1,\n            \"specialInstructions\": \"50% ice\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "cb-load-balancer-1952637199.ap-southeast-1.elb.amazonaws.com/api/v1/order",
+					"host": [
+						"cb-load-balancer-1952637199",
+						"ap-southeast-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"order"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

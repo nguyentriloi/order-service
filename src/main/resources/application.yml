@@ -1,0 +1,20 @@
+spring:
+  liquibase:
+    change-log: classpath:db/changelog/changelog.sql
+    enabled: true
+    default-schema: order
+  datasource:
+    url: jdbc:postgresql://${DB_HOST}:${DB_PORT}/${DB_NAME}?&currentSchema=order&stringtype=unspecified
+    hikari:
+      connectionTimeout: 20000
+      idleTimeout: 300000
+      maximum-pool-size: 20
+      minimum-idle: 5
+      username: ${DB_USERNAME}
+      password: ${DB_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+events:
+  queues:
+    user-created-payment-queue: user_created_payment_queue
+    user-updated-payment-queue: user_updated_payment_queue
+    user-completed-payment-queue: user_completed_payment_queue
